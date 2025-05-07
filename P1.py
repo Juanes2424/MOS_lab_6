@@ -137,9 +137,9 @@ def genetico(maze):
                 nuevaPoblacion.append(mutacion(indiv))
 
         # Crossover
-        for j in range(20):
+        for j in range(50):
             for k in range(300):
-                if i != k:
+                if j != k and j + 10 < k:
                     if random.random() < p_cruce:
                         nuevaPoblacion.append(crossover(poblacion[j], poblacion[k]))
 
